@@ -6,7 +6,7 @@
     --color-rosegold: #bf7f89;
     --font-size: 1em;
 }
-@media (max-width: 420px) {
+@media (max-width: 420px) or (max-height: 420px){
     :root {
         --font-size: 0.8em;
     }
@@ -105,6 +105,7 @@ body {
     }
 }
 
+/* define content grid, maximum 4 items per row */
 .portfolio-items-wrapper {
     display: grid;
     grid-template-columns: repeat(var(--repeat, auto-fit), minmax(360px, 1fr));
@@ -116,8 +117,9 @@ body {
     cursor: pointer;
 }
 
+/* designing and animating background image on hover */
 .portfolio-item-wrapper {
-    --item-height: min(70vw, 360px);
+    --item-height: min(70vh, 70vw, 360px);
     display: flex;
     justify-content: center;
 }
@@ -129,14 +131,14 @@ body {
     background-repeat: no-repeat;
     transition: 0.8s;
 }
-
 .portfolio-item-wrapper:hover > .portfolio-img-background {
     filter: brightness(15%) blur(8px);
 }
 
+/* hover content layout */
 .img-text-wrapper {
     position: absolute;
-    top: 20px;
+    top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,10 +149,15 @@ body {
     padding-right: calc(var(--item-height) / 8);
 }
 
+/* designing hover content */
+.img-text-wrapper > .logo-wrapper {
+    padding-top: 20px;
+}
+
 .img-text-wrapper > .subtitle {
     color: var(--color-rosegold);
     font-weight: 600;
-    padding-top: 8px;
+    /* padding-top: 8px; */
     font-size: var(--font-size);
 }
 
@@ -161,11 +168,11 @@ body {
     font-style: italic;
 }
 
+/* animate in the hover content */
 .img-text-wrapper div {
     opacity: 0;
     transition: 0.8s;
 }
-
 .img-text-wrapper:hover div {
     opacity: 1;
 }
