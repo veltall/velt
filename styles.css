@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --color-rosegold: #bf7f89;
+    --font-size: 1em;
+}
+@media (max-width: 420px) {
+    :root {
+        --font-size: 0.8em;
+    }
+}
+
+/* Master styles */
+body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Dongle', 'Yuji Syuku', sans-serif;
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 38px;
+    line-height: 32px;
+    font-size: xx-large;
+    background-color: var(--color-rosegold);
+    row-gap: 0.3em;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.branding {
+    font-size: calc(var(--font-size) * 1.5);
+    font-weight: bolder;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+.nav-bar > .right-side > div {
+    margin-right: 20px;
+    font-size: var(--font-size);
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #E5CACE;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+.active-nav-link a {
+    color: black !important;
+}
+
+/* content styles */
+.content-wrapper {
+    font-size: x-large;
+    line-height: 1em;
+    background-color: var(--color-rosegold);
+}
+
+.portfolio-items-wrapper {
+    --repeat: auto-fit;
+}
+@media (min-width: calc(360px * 4)) {
+    .portfolio-items-wrapper {
+        --repeat: 4;
+    }
+}
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--repeat, auto-fit), minmax(360px, 1fr));
+    gap: 2px;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-item-wrapper {
+    --item-height: min(70vw, 360px);
+    display: flex;
+    justify-content: center;
+}
+.portfolio-img-background {
+    height: var(--item-height);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.8s;
+}
+
+.portfolio-item-wrapper:hover > .portfolio-img-background {
+    filter: brightness(15%) blur(8px);
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: calc(var(--item-height) / 8);
+    padding-right: calc(var(--item-height) / 8);
+}
+
+.img-text-wrapper > .subtitle {
+    color: var(--color-rosegold);
+    font-weight: 600;
+    padding-top: 8px;
+    font-size: var(--font-size);
+}
+
+.img-text-wrapper > .quote {
+    color: whitesmoke;
+    font-size: calc(var(--font-size) * 0.8);
+    padding-left: 35%;
+    font-style: italic;
+}
+
+.img-text-wrapper div {
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.img-text-wrapper:hover div {
+    opacity: 1;
+}
