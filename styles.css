@@ -13,6 +13,12 @@
 }
 
 /* Master styles */
+
+/* fixing scrollbar jump issue */
+@media screen and (min-width: 960px) {
+    html { overflow-y: scroll; }
+}
+
 body {
     margin: 0px;
 }
