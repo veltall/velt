@@ -1,251 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="nav-wrapper">
-            <div class="nav-bar">
-                <div class="left-side">
-                    <div class="branding">
-                        <div>VU "VELT" DINH</div>
-                    </div>     
-                </div>
-                <div class="right-side">
-                    <div class="nav-link-wrapper">
-                        <div class="active-nav-link">
-                            <a href="index.html">Home</a>
-                        </div>
-                    </div>
-                    <div class="nav-link-wrapper">
-                        <a href="about.html">About</a>
-                    </div>
-                </div>
+      <div class="nav-wrapper">
+        <div class="nav-bar">
+          <div class="left-side">
+            <div class="branding">
+              <div>VU "VELT" DINH</div>
             </div>
+          </div>
+          <div class="right-side">
+            <div class="nav-link-wrapper">
+              <div class="active-nav-link">
+                <a href="index.html">Home</a>
+              </div>
+            </div>
+            <div class="nav-link-wrapper">
+              <a href="about.html">About</a>
+            </div>
+            <div class="nav-link-wrapper">
+              <a href="apollo.html">Apollo</a>
+            </div>
+          </div>
         </div>
-        <div class="content-wrapper">
-            <div class="portfolio-items-wrapper">
+      </div>
+      <div class="content-wrapper">
+        <div class="portfolio-items-wrapper">
+          <div class="portfolio-item-wrapper" onclick="link_to_guitar()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/guitar.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/musicnote.png" alt="" />
+              </div>
+              <div class="subtitle">Francisco Tarrega is a god among men.</div>
+              <div class="quote">Johann Sebastian Bach, probably</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_guitar()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/guitar.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/musicnote.png" alt="" width="64">
-                        </div>
-                        <div class="subtitle">
-                            Francisco Tarrega is a god among men.
-                        </div>
-                        <div class="quote">
-                            Johann Sebastian Bach, probably
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_drift()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/car.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/driftcar.png" alt="" />
+              </div>
+              <div class="subtitle" lang_jp="true">
+                「テックなんてもんは教えられてみにつもんじゃね」
+              </div>
+              <div class="quote">Bunta Fujiwara</div>
+            </div>
+          </div>
 
+          <div class="portfolio-item-wrapper" onclick="link_to_ghibli()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/ghibli.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/totoro.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Try laughing. Then whatever scares you will go away.
+              </div>
+              <div class="quote">Tatsuo Kusakabe</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_drift()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/car.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/driftcar.png" alt="" width="190">
-                        </div>
-                        <div class="subtitle">
-                            「テックなんてもんは教えられてみにつもんじゃね」
-                        </div>
-                        <div class="quote">
-                            Bunta Fujiwara
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_science()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/nebula.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/telescope.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Equipped with his five senses, man explores the universe around
+                him and calls the adventure Science.
+              </div>
+              <div class="quote">Edwin P. Hubble</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_ghibli()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/ghibli.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/totoro.png" alt="" width="124">
-                        </div>
-                        <div class="subtitle">
-                            Try Laughing. Then Whatever Scares You Will Go Away.
-                        </div>
-                        <div class="quote">
-                            Tatsuo Kusakabe
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/laptop.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/code.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Experience is the name everyone gives to their mistakes.
+              </div>
+              <div class="quote">Oscar Wilde</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_science()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/nebula.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/telescope.png" alt="" width="98">
-                        </div>
-                        <div class="subtitle">
-                            Equipped with his five senses, man explores the universe around him and calls the adventure Science.
-                        </div>
-                        <div class="quote">
-                            Edwin P. Hubble
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/maple.png)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/maplelogo.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Finishing Maple dailies is like coming home from work.
+              </div>
+              <div class="quote">Leena Schulen</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/laptop.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/code.png" alt="" width="86">
-                        </div>
-                        <div class="subtitle">
-                            Experience is the name everyone gives to their mistakes.
-                        </div>
-                        <div class="quote">
-                            Oscar Wilde
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_gaming()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/keyboard.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/gaming.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Only those close to the top are rewarded without trying. It's
+                the way of the world.
+              </div>
+              <div class="quote">Delita Hyral</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/maple.png)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/maplelogo.png" alt="" width="98">
-                        </div>
-                        <div class="subtitle">
-                            Finishing Maple dailies is like coming home from work.
-                        </div>
-                        <div class="quote">
-                            Leena Schulen
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_uimama()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/uiloli.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/police.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Age is just a number...and jail is just a room!
+              </div>
+              <div class="quote">common wisdom</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_gaming()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/keyboard.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/gaming.png" alt="" width="94">
-                        </div>
-                        <div class="subtitle">
-                            Only those close to the top are rewarded without trying. It's the way of the world.
-                        </div>
-                        <div class="quote">
-                            Delita Hyral
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_food()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/sushi2.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/food.png" alt="" />
+              </div>
+              <div class="subtitle">
+                The only time to eat diet food is while you're waiting for the
+                steak to cook.
+              </div>
+              <div class="quote">Julia Child</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_uimama()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/uiloli.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/police.png" alt="" width="84">
-                        </div>
-                        <div class="subtitle">
-                            Age is just a number...and jail is just a room! 
-                        </div>
-                        <div class="quote">
-                            common wisdom
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/tools.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/toolslogo.png" alt="" />
+              </div>
+              <div class="subtitle">
+                I like things to happen, and if they don't happen I like to make
+                them happen.
+              </div>
+              <div class="quote">Winston Churchill</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper" onclick="link_to_food()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/sushi2.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/food.png" alt="" width="74">
-                        </div>
-                        <div class="subtitle">
-                            The only time to eat diet food is while you're waiting for the steak to cook.
-                        </div>
-                        <div class="quote">
-                            Julia Child
-                        </div>
-                    </div>
-                </div>
+          <div class="portfolio-item-wrapper" onclick="link_to_bach()">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/piano.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/bach.png" alt="" />
+              </div>
+              <div class="subtitle">
+                To me the Chaconne is one of the most beautiful, incredible
+                compositions.
+              </div>
+              <div class="quote">Johannes Brahms</div>
+            </div>
+          </div>
 
-                <div class="portfolio-item-wrapper">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/tools.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/toolslogo.png" alt="" width="94">
-                        </div>
-                        <div class="subtitle">
-                            I like things to happen, and if they don't happen I like to make them happen.
-                        </div>
-                        <div class="quote">
-                            Winston Churchill
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="portfolio-item-wrapper" onclick="link_to_bach()">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/piano.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/bach.png" alt="" width="128">
-                        </div>
-                        <div class="subtitle">
-                            To me the Chaconne is one of the most beautiful, incredible compositions.
-                        </div>
-                        <div class="quote">
-                            Johannes Brahms
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item-wrapper">
-                    <div class="portfolio-img-background" style="background-image:url(assets/images/feet.jpg)"></div>
-                    <div class="img-text-wrapper">
-                        <div class="logo-wrapper">
-                            <img src="assets/images/heart.png" alt="" width="84">
-                        </div>
-                        <div class="subtitle">
-                            Affection is when you see someone's strengths; love is when you accept their weaknesses.
-                        </div>
-                        <div class="quote">
-                            unknown
-                        </div>
-                    </div>
-                </div>
-
-            </div> 
+          <div class="portfolio-item-wrapper">
+            <div
+              class="portfolio-img-background"
+              style="background-image: url(assets/images/feet.jpg)"
+            ></div>
+            <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="assets/images/heart.png" alt="" />
+              </div>
+              <div class="subtitle">
+                Affection is when you see someone's strengths; love is when you
+                accept their weaknesses.
+              </div>
+              <div class="quote">unknown</div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <script>
-        function link_to_guitar() {
-            window.open("https://www.youtube.com/watch?v=Nz7k0DWSGL0");
-        }
-        function link_to_drift() {
-            window.open("https://www.youtube.com/watch?v=37Kmi110qtQ");
-        }
-        function link_to_ghibli() {
-            window.open("https://www.youtube.com/watch?v=bI9L0x8KOKs");
-        }
-        function link_to_science() {
-            window.open("https://youtu.be/C91gKuxutTU?t=28");
-        }
-        function link_to_gaming() {
-            window.open("https://www.youtube.com/watch?v=u_VBU4y2C4M");
-        }
-        function link_to_uimama() {
-            window.open("https://www.youtube.com/watch?v=j7nqiD0mDhc");
-        }
-        function link_to_food() {
-            window.open("https://www.youtube.com/watch?v=oAC3DODqLn4&list=PLUeEVLHfB5-Qsx-3arUU2tLGzHvsJ_yOB");
-        }
-        function link_to_bach() {
-            window.open("https://www.youtube.com/watch?v=c3mwVaQIZ1c");
-        }
-
+      function link_to_guitar() {
+        window.open("https://www.youtube.com/watch?v=Nz7k0DWSGL0");
+      }
+      function link_to_drift() {
+        window.open("https://www.youtube.com/watch?v=37Kmi110qtQ");
+      }
+      function link_to_ghibli() {
+        window.open("https://www.youtube.com/watch?v=bI9L0x8KOKs");
+      }
+      function link_to_science() {
+        window.open("https://youtu.be/C91gKuxutTU?t=28");
+      }
+      function link_to_gaming() {
+        window.open("https://www.youtube.com/watch?v=u_VBU4y2C4M");
+      }
+      function link_to_uimama() {
+        window.open("https://www.youtube.com/watch?v=j7nqiD0mDhc");
+      }
+      function link_to_food() {
+        window.open(
+          "https://www.youtube.com/watch?v=oAC3DODqLn4&list=PLUeEVLHfB5-Qsx-3arUU2tLGzHvsJ_yOB"
+        );
+      }
+      function link_to_bach() {
+        window.open("https://www.youtube.com/watch?v=c3mwVaQIZ1c");
+      }
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --color-rosegold: #bf7f89;
+    --font-size: 1em;
+}
+@media (max-width: 420px) or (max-height: 420px){
+    :root {
+        --font-size: 0.8em;
+    }
+}
+
+/* Master styles */
+
+/* fixing scrollbar jump issue */
+@media screen and (min-width: 960px) {
+    html { overflow-y: scroll; }
+}
+
+p {
+    margin: 10vw 0 10vw 0;
+    color: white;
+}
+
+/* p::before {
+    content: '\n';
+}
+p::after {
+    content: '\n';
+} */
