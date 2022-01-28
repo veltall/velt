@@ -11,32 +11,49 @@
       href="assets/icons/favicon.png"
       type="image/x-icon"
     />
+    <link rel="import" href="nav.html" />
+    <script src="nav.js" defer></script>
   </head>
 
   <body>
     <div class="container">
-      <div class="nav-wrapper">
-        <div class="nav-bar">
-          <div class="left-side">
-            <div class="branding">
-              <div>VU "VELT" DINH</div>
-            </div>
-          </div>
-          <div class="right-side">
-            <div class="nav-link-wrapper">
-              <div class="active-nav-link">
-                <a href="index.html">Home</a>
-              </div>
-            </div>
-            <div class="nav-link-wrapper">
-              <a href="about.html">About</a>
-            </div>
-            <div class="nav-link-wrapper">
-              <a href="apollo.html">Apollo</a>
-            </div>
-          </div>
+      <!-- navigation bar -->
+      <header class="primary-header flex">
+        <div>
+          <img src="assets/icons/favicon.png" alt="favicon" class="logo" />
         </div>
-      </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li class="active">
+              <a href="index.html"><span aria-hidden="true">00</span>Home</a>
+            </li>
+            <li>
+              <a href="about.html"><span aria-hidden="true">01</span>About</a>
+            </li>
+            <li>
+              <a href="apollo.html"><span aria-hidden="true">02</span>Apollo</a>
+            </li>
+            <li>
+              <a href="#"><span aria-hidden="true">03</span>Empty</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- content area -->
       <div class="content-wrapper">
         <div class="portfolio-items-wrapper">
           <div class="portfolio-item-wrapper" onclick="link_to_guitar()">
@@ -262,7 +279,7 @@
         );
       }
       function link_to_bach() {
-        window.open("https://www.youtube.com/watch?v=c3mwVaQIZ1c");
+        window.open("https://www.youtube.com/watch?v=ngjEVKxQCWs");
       }
     </script>
   </body>

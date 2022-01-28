@@ -1,0 +1,119 @@
+@import url(styles.css);
+
+html {
+  background: url("http://unsplash.it/1920/1080?random&gravity=center")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #333; */
+  position: relative;
+  font-family: "Montserrat", "Dongle", sans-serif;
+  text-transform: uppercase;
+  overflow-x: hidden;
+}
+
+.sr-only {
+  font-size: 0;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.logo {
+  margin: 2rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primary-navigation a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 0.75em;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    --gap: 2em;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(10rem, 30vh) 2rem;
+    transform: translateX(100%);
+    transition: transform 0.35s ease-out;
+  }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    right: 2rem;
+    top: 2rem;
+    background: url(assets/icons/hamburger-icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(assets/icons/close-icon.png);
+  }
+}
+
+/* @media (min-width: 35em) and (max-width: 55em) {
+  .primary-navigation a > span[aria-hidden="true"] {
+    display: none;
+  }
+} */
+
+@media (min-width: 35em) {
+  .primary-navigation {
+    --gap: 3rem;
+    /* padding-block: 2rem; */
+    line-height: 4rem;
+    padding-inline: clamp(2rem, 3vw, 5rem);
+  }
+  .primary-navigation a > span[aria-hidden="true"] {
+    display: none;
+  }
+}
