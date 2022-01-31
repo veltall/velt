@@ -150,6 +150,7 @@ footer {
     grid-auto-flow: dense;
   }
 
+  /* grey floating background */
   main::after {
     content: "";
     position: absolute;
